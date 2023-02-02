@@ -10,7 +10,8 @@ import utilHelper from '../helper/UtilHelper.js';
     }
 
     // 선택된 id에 맞는 한 개의 레시피 불러오기
-    const url = `http://localhost:3001/recipes/${params.id}`;
+    // const url = `http://localhost:3001/recipes/${params.id}`;
+    const url = `https://sqhtjs0104.github.io/recipe/data/recipes.json/${params.id}`;
     let json = null;
 
     try {
