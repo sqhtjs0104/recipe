@@ -1,4 +1,4 @@
-const url = `http://localhost:3001/recipes`;
+const url = `http://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
 
 (async () => {
 
@@ -65,7 +65,7 @@ const url = `http://localhost:3001/recipes`;
 
             if (confirm(`정말 ${name}을 삭제하시겠습니까?`)) {
                 try {
-                    await axios.delete(`http://localhost:3001/recipes/${id}`);
+                    await axios.delete(`http://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${id}`);
                     
                 } catch (e) {
                     console.error(e);

@@ -18,7 +18,7 @@ import utilHelper from '../helper/UtilHelper.js';
     
     const step = String(params.step).padStart(2, "0");
 
-    const url = `http://localhost:3001/recipes/${params.id}`;
+    const url = `http://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${params.id}`;
     let json = null;
 
     try {
