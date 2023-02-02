@@ -31,7 +31,7 @@ window.addEventListener('scroll', e => {
 // 화면에 새로운 12개 불러오기
 async function insertList(currentCnt, itemCnt) {    
     const params = utilHelper.getUrlParams();
-    const url = `http://sqhtjs0104.github.io/recipe/assets/data/recipes.json/`;
+    const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json/`;
 
     let json = null;
 

@@ -59,7 +59,7 @@ document.querySelector('#step').setAttribute('value', manualCnt / 2);
 document.querySelector('#addRecipe-form__submit').addEventListener('click', async e => {
     e.preventDefault(); // 폼 기본 효과 막기
 
-    url = "http://sqhtjs0104.github.io/recipe/assets/data/recipes.json" // 새로 저장할 고유 서버 주소
+    url = "https://sqhtjs0104.github.io/recipe/assets/data/recipes.json" // 새로 저장할 고유 서버 주소
 
     // 저장할 내용을 담을 빈 JSON. 세션스토리지로 데려온 JSON은 불필요한 내용까지 담고 있기에 바로 사용 x,
     // 저장 전 수정을 위해 화면 form에 뿌려준 form 안의 데이터들만 저장할 예정.

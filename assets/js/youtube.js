@@ -8,7 +8,7 @@ const params = utilHelper.getUrlParams();
 // const searchKeyword = encodeURI(params.id.RCP_NM);
 let searchKeyword = "";
 
-const localUrl = `http://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${params.id}`;
+const localUrl = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${params.id}`;
 
 (async() => {
     let json = null;

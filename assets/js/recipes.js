@@ -1,4 +1,4 @@
-const url = `http://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
+const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
 
 (async () => {
 
@@ -65,7 +65,7 @@ const url = `http://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
 
             if (confirm(`정말 ${name}을 삭제하시겠습니까?`)) {
                 try {
-                    await axios.delete(`http://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${id}`);
+                    await axios.delete(`https://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${id}`);
                     
                 } catch (e) {
                     console.error(e);

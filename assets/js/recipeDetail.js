@@ -8,7 +8,7 @@ if (!params.itemNo) {
 } else {
     document.querySelector('#btnDel').dataset.id = params.itemNo;
 }
-const url = `http://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${params.itemNo}`;
+const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${params.itemNo}`;
 
 (async () => {
 

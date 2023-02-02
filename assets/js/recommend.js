@@ -1,4 +1,4 @@
-const url = `http://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
+const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
 
 async function recommend(nowTemp) {
     // ajax 받을 json
