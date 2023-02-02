@@ -11,12 +11,13 @@ import utilHelper from '../helper/UtilHelper.js';
 
     // 선택된 id에 맞는 한 개의 레시피 불러오기
     // const url = `http://localhost:3001/recipes/${params.id}`;
-    const url = `https://sqhtjs0104.github.io/recipe/data/recipes.json/${params.id}`;
+    const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
     let json = null;
 
     try {
         const response = await axios.get(url);
-        json = response.data;
+        json = response.data.recipes.filter(v => v.id == params.id)[0];
+        console.log(json);
     } catch (e) {
         console.error(e);
         alert('음식을 불러오지 못했습니다.');

@@ -8,7 +8,7 @@ if (!params.itemNo) {
 } else {
     document.querySelector('#btnDel').dataset.id = params.itemNo;
 }
-const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${params.itemNo}`;
+const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
 
 (async () => {
 
@@ -16,7 +16,7 @@ const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${para
 
     try {
         const response = await axios.get(url);
-        json = response.data;
+        json = response.data.recipes.filter(v => v.id == params.itemNo)[0];
         console.log(json);
     } catch (e) {
         console.error(e);

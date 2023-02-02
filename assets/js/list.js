@@ -31,13 +31,13 @@ window.addEventListener('scroll', e => {
 // 화면에 새로운 12개 불러오기
 async function insertList(currentCnt, itemCnt) {    
     const params = utilHelper.getUrlParams();
-    const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json/`;
+    const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
 
     let json = null;
 
     try {
-        const response = await axios.get(url);
-        json = response.data;
+        const response = await axios.get(url);  
+        json = response.data.recipes;
     } catch (e) {
         console.error(e);
         alert('레시피를 불러오는데 실패했습니다');

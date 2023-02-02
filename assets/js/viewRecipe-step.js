@@ -18,12 +18,12 @@ import utilHelper from '../helper/UtilHelper.js';
     
     const step = String(params.step).padStart(2, "0");
 
-    const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${params.id}`;
+    const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
     let json = null;
 
     try {
         const response = await axios.get(url);
-        json = response.data;
+        json = response.data.recipes.filter(v => v.id == params.id)[0];
     } catch (e) {
         console.error(e);
         alert('음식을 불러오지 못했습니다.');

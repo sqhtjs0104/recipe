@@ -85,7 +85,7 @@ document.querySelector('#addRecipe-form__submit').addEventListener('click', asyn
 
     // post 메서드를 통해 고유 데이터베이스에 추출한 내용 json 저장
     try {
-        const response = await axios.post(url, json);
+        const response = await axios.post(url, json, {withCredentials: true});
         // 그 후 추가한 아이디의 상세 페이지로 이동. response의 data는 추가된 JSON을 의미, id는 자동 추가. 자동 추가된 고유 id를 queryString에 이용
         window.location = `recipeDetail.html?itemNo=${response.data.id}`;
     } catch (e) {

@@ -8,14 +8,14 @@ const params = utilHelper.getUrlParams();
 // const searchKeyword = encodeURI(params.id.RCP_NM);
 let searchKeyword = "";
 
-const localUrl = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json/${params.id}`;
+const localUrl = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
 
 (async() => {
     let json = null;
 
     try {
         const response = await axios.get(localUrl);
-        json = response.data;
+        json = response.data.recipes.filter(v => v.id == params.id)[0];
         searchKeyword = json.RCP_NM;
     } catch (e) {
         console.error(e);

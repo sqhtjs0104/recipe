@@ -1,4 +1,4 @@
-const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json/recipes`;
+const url = `https://sqhtjs0104.github.io/recipe/assets/data/recipes.json`;
 
 async function recommend(nowTemp) {
     // ajax 받을 json
@@ -6,7 +6,7 @@ async function recommend(nowTemp) {
 
     try {
         const response = await axios.get(url);
-        json = response.data;
+        json = response.data.recipes;
     } catch (e) {
         console.error(e);
         alert('음식을 불러오지 못했습니다.');
